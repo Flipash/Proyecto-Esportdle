@@ -1,0 +1,143 @@
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url('img/China_CG_Jett_Jump_Full.jpg');
+    background-size:cover; 
+    background-position: center; 
+    background-attachment:fixed;
+}
+
+header{
+    display: flex;
+    justify-content:center;
+    align-items: center;    
+        
+}
+
+.img2{
+    margin: 0px 40px;
+    width: 30%;
+    height: 20%;
+}
+
+.selector{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.game_button {
+    cursor: pointer;
+    padding: 5px 0px;
+    margin: 10px auto;
+    border-radius: 5px;
+    position: relative; /* Necesario para que los textos se posicionen encima */
+    overflow: hidden;
+    width: 90%;
+    max-width: 600px;
+
+}
+
+/* Quitamos la transición rota */
+.game_button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen de fondo */
+.img_button {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Títulos y descripciones encima de la imagen */
+.button_title, .button_description {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+    z-index: 2;
+}
+
+.button_title {
+    top: 20%;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.button_description {
+    top: 45%;
+    font-size: 16px;
+}
+
+/* Fondo semitransparente si querés más contraste para el texto (opcional) */
+.game_button::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0); /* Oscurece un poco la imagen */
+    z-index: 1;
+}
+
+
+@media (max-width:992px){
+    body {
+        background-attachment: scroll;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .img2 {
+        width: 50%;
+        margin: 20px 0;
+    }
+
+    .menu {
+        font-size: 16px; 
+    }
+
+    .game_button {
+        padding: 10px 15px; 
+    }
+
+    .button_title {
+        font-size: 18px; 
+    }
+
+    .button_description {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+/**
+.menu{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100% ;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.game_button{
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 10px auto;
+}
+.img_button{
+    width: auto;
+}
+
+.button_title{
+    font-weight: bold;
+    font-size: 20px;
+}
+.button_description{
+    font-size: 15px;
+}
