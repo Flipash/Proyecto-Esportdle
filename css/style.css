@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url('img/China_CG_Jett_Jump_Full.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Navbar */
+header {
+    background-color: #111;
+}
+
+
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+.navbar-nav{
+    color: white;
+    margin: 0 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.boton-container{
+    justify-content: center;
+    margin: opx;
+}
+
+/* Botones estilo juego */
+.game_button {
+    position: relative;
+    margin: 10px 0;
+    width: 90%;
+    max-width: 600px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.img_button, .button-img {
+    width: 100%;
+    display: block;
+
+}
+
+.button_title,
+.button_description {
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+    z-index: 2;
+    text-align: center;
+}
+
+.button_title {
+    top: 20%;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.button_description {
+    top: 45%;
+    font-size: 16px;
+}
+
+/* Capa oscura opcional */
+.game_button::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #353535;
+    color: white;
+    padding: 10px 30%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    main .selector {
+        padding: 10px;
+        grid-column: 1 / -1;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-brand img {
+        height: 70%;
+        width: 70%;
+    }
+    .button_title {
+    top: 20%;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+    .img2 {
+        width: auto;
+        height: 50%;
+        margin: 0 auto;
+    }
+}
