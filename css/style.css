@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Navbar */
+header {
+    background-color: #111;
+}
+
+.logo{
+    transition: 2s ease-out;
+}
+
+.logo:hover{
+    border-bottom: 1px solid rgb(255, 0, 0);
+    transform:rotateZ(20deg);
+
+}
+
+main{    
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('/img/5e69fe67-a71f-439e-b422-067401e9c732.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: center 40px;
+}
+
+.navbar-nav{
+    color: white;
+    margin:0px;
+}
+.nav-item{
+    transition: 5s ease;
+}
+
+.nav-item:hover{
+    border-bottom: 1px solid white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.text-center{
+    margin-top: 20px;
+}
+
+.boton-container{
+    justify-content: center;
+}
+
+.game_button {
+    position: relative;
+    margin: 40px 0px;
+    max-width: 600px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.game_button:hover{
+    translate: 8% 4%;
+}
+
+.img_button, .button-img {
+    width: 100%;
+    display: block;
+
+}
+
+.button_title,
+.button_description {
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+    z-index: 2;
+    text-align: center;
+}
+
+.button_title {
+    top: 10%;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 4px 4px 4px rgba(0,0,0,0.9);
+}
+
+.button_description {
+    top: 50%;
+    font-size: 16px;
+}
+
+Capa oscura opcional
+.game_button::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+footer {
+    color: white;
+    padding: 10px;
+    margin: 0px;
+}
+
+.container h4{
+    color: gray;
+}
+
+/* Responsive */
+@media (min-width: 650px) {
+    body {
+        color: black;
+    }
+
+    .navbar-brand img {
+        height: 80%;
+        width: 80%;
+    }
+    .button_title {
+        top: 2%;
+        font-weight: bold;
+        font-size: 24px;
+    }
+}
